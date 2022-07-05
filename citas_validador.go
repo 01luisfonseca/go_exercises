@@ -19,14 +19,12 @@ func main() {
 		return
 	}
 
-	if !checkWeekDay(weekday) {
-		fmt.Println("No es un día de la semana. ", weekday)
+	if !checkValidDateInfo(hour, minute) {
+		fmt.Println("La hora o los minutos son incorrectos. ", hour, minute)
 		return
 	}
 
-	fmt.Println(weekday)
-	fmt.Println(hour)
-	fmt.Println(minute)
+	fmt.Println("Cita con datos correctos")
 	fmt.Println(description)
 }
 
@@ -58,7 +56,7 @@ func checkValidDateInfo(hour, minute string) bool {
 	return IntBetween(intHour, 0, 24) && IntBetween(intMin, 0, 59)
 }
 
-func IntBetween(i, min, max int) bool {
+func IntBetween(i, min, max int64) bool {
 	if (i >= min) && (i <= max) {
 		return true
 	} else {
