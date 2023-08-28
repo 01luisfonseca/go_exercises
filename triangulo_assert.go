@@ -13,7 +13,7 @@ type segmento struct {
 	b [2]int64
 }
 
-func main() {
+func main_old() {
 	fmt.Println("Programa de prueba de triangulos")
 	pointA1, _ := readinput.Read("Punto 1 Segmento A. Ej: 1,2")
 	pointA2, _ := readinput.Read("Punto 2 Segmento A. Ej: 1,2")
